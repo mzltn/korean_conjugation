@@ -2,6 +2,12 @@
 
 # (C) 2010 Dan Bravender - licensed under the AGPL 3.0
 
+try:
+    unicode
+except NameError:
+    unicode = str  # In Python 3, use str as a replacement for unicode
+    unichr = chr  # In Python 3, use chr instead of unichr
+
 class Geulja(unicode):
     u'''Geulja is used to track modifications that have been made to
         characters. Currently, it keeps track of characters' original

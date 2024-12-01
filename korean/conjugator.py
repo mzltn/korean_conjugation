@@ -4,6 +4,7 @@
 
 from hangeul import join, lead, vowel, padchim, find_vowel_to_append, match, Geulja
 from pronunciation import pronunciation
+import sys
 
 def no_padchim_rule(characters):
     u'''no_padchim_rule is a helper function for defining merges where a 
@@ -207,9 +208,14 @@ verb_types = {
 }
 
 def verb_type(infinitive):
-    for irregular_name, func in verb_types.iteritems():
-        if func(base(infinitive)):
-            return irregular_name
+    if sys.version_info[0] < 3:
+        for irregular_name, func in verb_types.iteritems():
+            if func(base(infinitive)):
+                return irregular_name
+    else:
+        for irregular_name, func in verb_types.items():
+            if func(base(infinitive)):
+                return irregular_name
     return u'regular verb'
 
 @conjugation
