@@ -1,8 +1,7 @@
 
 all: Dongsa.ankiaddon
 
-FILES += COPYRIGHT
-FILES += agpl-3.0.txt
+FILES += LICENSE.txt
 FILES += __init__.py
 FILES += conjugation_row.py
 FILES += config.py
