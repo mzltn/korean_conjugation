@@ -7,7 +7,6 @@ FILES += conjugation_row.py
 FILES += config.py
 FILES += config.json
 FILES += manifest.json
-FILES += meta.json
 
 # generated code:
 FILES += ui/ui_main_dialog.py
