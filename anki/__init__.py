@@ -203,6 +203,7 @@ class MainDialog(QDialog):
         # store settings that were used for generating the conjugations
         self._store_current_config()
 
+        browser_window.search()
         show_messagebox_info("Generated conjugates for %d notes." % n_notes)
 
     def del_conjugation_row(self):
